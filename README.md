@@ -12,7 +12,7 @@ cp docker-compose-template.yml docker-compose.yml
 
 # If you want to add custom torrc configuration
 cp torrc.d/custom-config cp torrc.d/my-custom-config
-vim torrc.d/my-custom-confi
+vim torrc.d/my-custom-config
 
 # Start the container
 docker compose up -d
