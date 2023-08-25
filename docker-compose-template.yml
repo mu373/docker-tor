@@ -1,0 +1,25 @@
+services:
+  tor:
+    build: .
+    image: mu373/tor-docker
+    container_name: tor
+    volumes:
+      - ./torrc.d/:/etc/torrc.d/ # You can add custom torrc in this directory
+    ports:
+      - 9050:9050
+      - 9051:9051
+    # If you want to use this proxy through traefik
+    # networks:
+    #   - traefik-nw
+    # labels:
+    #   traefik.enable: true
+    #   traefik.docker.network: traefik-nw
+    #   traefik.tcp.routers.tor.rule: HostSNI(`your-domain.example.com`)
+    #   traefik.tcp.routers.tor.service: tor
+    #   traefik.tcp.routers.tor.entrypoints: tor-socks
+    #   traefik.tcp.routers.tor.tls.certresolver: cloudflare
+    #   traefik.tcp.services.tor.loadbalancer.server.port: 9050
+
+# networks:
+#   traefik-nw:
+#     external: true
