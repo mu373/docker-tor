@@ -1,4 +1,4 @@
-# tor-docker
+# docker-tor
 
 Simple Docker container for Tor.
 - Unlike other Docker images for Tor (i.e., [dperson/torproxy](https://github.com/dperson/torproxy) and [dockage/tor-privoxy](https://github.com/dockage/tor-privoxy)), this one only runs SOCKS5 proxy.
